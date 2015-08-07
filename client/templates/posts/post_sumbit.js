@@ -1,5 +1,5 @@
 Template.postSubmit.events({
-  'sumbit form': function(e) {
+  'submit form': function(e) {
     e.preventDefault();
 
     var post = {
@@ -11,3 +11,5 @@ Template.postSubmit.events({
     Router.go('postPage', post);
   }
 });
+
+
