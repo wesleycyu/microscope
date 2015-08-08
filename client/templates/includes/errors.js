@@ -4,7 +4,6 @@ Template.errors.helpers ({
   }
 });
 
-
 Template.error.rendered = function () {
   var error  = this.data;
   Meteor.setTimeout(function () {
