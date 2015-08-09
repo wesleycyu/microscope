@@ -1,22 +1,7 @@
-if (Posts.find().count() === 0) {
-  Posts.insert ({
-    title: 'Introducing Telescope',
-    url: 'http://sachagreif.com/introducing-telescope/'
-  });
-  Posts.insert ({
-    title: 'Meteor',
-    url: 'http://meteor.com'
-  });
-  Posts.insert ({
-    title: 'The Meteor Book',
-    url: 'http://themeteorbook.com'
-  });
-}
-
-if (Comments.find().count() === 0) {
+if (Comments.find().count() === 0 && Posts.find().count() === 0) {
   var now = new Date().getTime();
 
-  var tomId = meteor.users.insert({
+  var tomId = Meteor.users.insert({
     profile: {name: "Tom Coleman"}
   });
 
@@ -32,7 +17,7 @@ if (Comments.find().count() === 0) {
     userId: sacha._id,
     author: sacha.profile.name,
     url: 'http://sachagreif.com/introducing-telescope/',
-    submitted: new Data(now - 7 * 3600 * 1000)
+    submitted: new Date(now - 7 * 3600 * 1000)
   });
 
   Comments. insert({
