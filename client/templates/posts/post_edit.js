@@ -1,4 +1,4 @@
-Template.postEdit.created = function() { Session.set('postEditErrors', {});
+Template.postEdit.onCreated = function() { Session.set('postEditErrors', {});
 }
 Template.postEdit.helpers({
   errorMessage: function(field) {

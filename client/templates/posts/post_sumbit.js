@@ -1,4 +1,4 @@
-Template.postSubmit.created = function () {
+Template.postSubmit.onCreated = function () {
   Session.set('postSubmitErrors', {});
 }
 
